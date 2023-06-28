@@ -7,25 +7,26 @@
 //------------------------------------------------------------------------------
 using Bright.Serialization;
 using System.Collections.Generic;
+using SimpleJSON;
+
 
 
 namespace cfg.Hero
-{
-   
-public partial class TBHeroInfo
+{ 
+
+public sealed partial class TBHeroInfo
 {
     private readonly Dictionary<int, Hero.HeroInfo> _dataMap;
     private readonly List<Hero.HeroInfo> _dataList;
     
-    public TBHeroInfo(ByteBuf _buf)
+    public TBHeroInfo(JSONNode _json)
     {
         _dataMap = new Dictionary<int, Hero.HeroInfo>();
         _dataList = new List<Hero.HeroInfo>();
         
-        for(int n = _buf.ReadSize() ; n > 0 ; --n)
+        foreach(JSONNode _row in _json.Children)
         {
-            Hero.HeroInfo _v;
-            _v = Hero.HeroInfo.DeserializeHeroInfo(_buf);
+            var _v = Hero.HeroInfo.DeserializeHeroInfo(_row);
             _dataList.Add(_v);
             _dataMap.Add(_v.Id, _v);
         }
@@ -55,6 +56,7 @@ public partial class TBHeroInfo
             v.TranslateText(translator);
         }
     }
+    
     
     partial void PostInit();
     partial void PostResolve();

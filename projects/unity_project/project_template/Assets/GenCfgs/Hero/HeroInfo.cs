@@ -7,25 +7,38 @@
 //------------------------------------------------------------------------------
 using Bright.Serialization;
 using System.Collections.Generic;
+using SimpleJSON;
+
 
 
 namespace cfg.Hero
-{
+{ 
+
 public sealed partial class HeroInfo :  Bright.Config.BeanBase 
 {
-    public HeroInfo(ByteBuf _buf) 
+    public HeroInfo(JSONNode _json) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        HeroMaxLevel = _buf.ReadInt();
-        Hp = _buf.ReadInt();
-        Attack = _buf.ReadFloat();
+        { if(!_json["id"].IsNumber) { throw new SerializationException(); }  Id = _json["id"]; }
+        { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
+        { if(!_json["heroMaxLevel"].IsNumber) { throw new SerializationException(); }  HeroMaxLevel = _json["heroMaxLevel"]; }
+        { if(!_json["hp"].IsNumber) { throw new SerializationException(); }  Hp = _json["hp"]; }
+        { if(!_json["attack"].IsNumber) { throw new SerializationException(); }  Attack = _json["attack"]; }
         PostInit();
     }
 
-    public static HeroInfo DeserializeHeroInfo(ByteBuf _buf)
+    public HeroInfo(int id, string name, int heroMaxLevel, int hp, float attack ) 
     {
-        return new Hero.HeroInfo(_buf);
+        this.Id = id;
+        this.Name = name;
+        this.HeroMaxLevel = heroMaxLevel;
+        this.Hp = hp;
+        this.Attack = attack;
+        PostInit();
+    }
+
+    public static HeroInfo DeserializeHeroInfo(JSONNode _json)
+    {
+        return new Hero.HeroInfo(_json);
     }
 
     public int Id { get; private set; }
@@ -60,5 +73,4 @@ public sealed partial class HeroInfo :  Bright.Config.BeanBase
     partial void PostInit();
     partial void PostResolve();
 }
-
 }

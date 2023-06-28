@@ -7,25 +7,26 @@
 //------------------------------------------------------------------------------
 using Bright.Serialization;
 using System.Collections.Generic;
+using SimpleJSON;
+
 
 
 namespace cfg.Levels
-{
-   
-public partial class TBLevel
+{ 
+
+public sealed partial class TBLevel
 {
     private readonly Dictionary<int, Levels.Level> _dataMap;
     private readonly List<Levels.Level> _dataList;
     
-    public TBLevel(ByteBuf _buf)
+    public TBLevel(JSONNode _json)
     {
         _dataMap = new Dictionary<int, Levels.Level>();
         _dataList = new List<Levels.Level>();
         
-        for(int n = _buf.ReadSize() ; n > 0 ; --n)
+        foreach(JSONNode _row in _json.Children)
         {
-            Levels.Level _v;
-            _v = Levels.Level.DeserializeLevel(_buf);
+            var _v = Levels.Level.DeserializeLevel(_row);
             _dataList.Add(_v);
             _dataMap.Add(_v.Id, _v);
         }
@@ -55,6 +56,7 @@ public partial class TBLevel
             v.TranslateText(translator);
         }
     }
+    
     
     partial void PostInit();
     partial void PostResolve();

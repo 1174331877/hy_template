@@ -1,0 +1,3 @@
+[submodule "projects/unity_project/project_template/Assets/hy_kernel"]
+	path = projects/unity_project/project_template/Assets/hy_kernel
+	url = https://gitee.com/CoderHH/hy_kernel.git

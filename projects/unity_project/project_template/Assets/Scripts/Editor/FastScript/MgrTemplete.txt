@@ -1,5 +1,0 @@
-﻿using LT_Kernel;
-
-public class #SCRIPTNAME# : AbsMgr
-{
-}

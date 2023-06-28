@@ -3,11 +3,11 @@ D:/UnityProjects/project_template/projects/unity_project/cfgs/Datas/__enums__.xl
 D:/UnityProjects/project_template/projects/unity_project/cfgs/Datas/__tables__.xlsx,543E5EA2389ED699C329378C3AE3851,9785,1687743495288
 D:/UnityProjects/project_template/projects/unity_project/cfgs/Datas/关卡配置/关卡表.xlsx,1CB2BCB15B73617DFB37C069C1E4F0EB,9023,1687743508756
 D:/UnityProjects/project_template/projects/unity_project/cfgs/Datas/英雄/英雄分类.xlsx,FEDBCC1FD43DDBED62345FBA54BF55B8,10545,1687752284136
-D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Hero/HeroInfo.cs,3FA8541B7CD733CA3B41297CFA4D173C,1676,1687914630979
-D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Hero/TBHeroInfo.cs,B7E044A265445C018B2367DAD35E2,1777,1687914630979
-D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Levels/Level.cs,ECF5E96CA39E33A13962A3F7D4ECEDF9,1428,1687914630979
-D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Levels/TBLevel.cs,3B6DCF302A126F7F34CDF9362124AB,1759,1687914630980
-D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Tables.cs,65BDF27BD2B697B53AFE48A1EA8EA5FA,1270,1687914630979
+D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Hero/HeroInfo.cs,1B85BFF429E2F379F613177B91CC3B33,2327,1687916534057
+D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Hero/TBHeroInfo.cs,C7480FDC26E254FFFBE9E151C575E94,1780,1687916534057
+D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Levels/Level.cs,FFE343E9D057E5485E0F7FCD5792CBF,1712,1687916534057
+D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Levels/TBLevel.cs,5CAEC3FF3A8DD350D14ED05C92FF5A,1763,1687916534057
+D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/GenCfgs/Tables.cs,99528F7BF85B452AA212DECE55F0DA55,1299,1687916534057
 D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/Res/BundleRes/cfgs/bytes/hero_tbheroinfo.bytes,5F395214F1D3A1A31098772ABB4EBFAF,66,1687914630980
 D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/Res/BundleRes/cfgs/bytes/levels_tblevel.bytes,FB3892B71CEB30F570125153274BFD12,34,1687914630980
 D:/UnityProjects/project_template/projects/unity_project/project_template/Assets/Res/BundleRes/cfgs/jsons/hero_tbheroinfo.json,F15A868853E0DA6D6CC669ED1F69D95,436,1687914616365

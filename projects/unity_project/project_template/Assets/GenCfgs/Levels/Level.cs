@@ -7,22 +7,32 @@
 //------------------------------------------------------------------------------
 using Bright.Serialization;
 using System.Collections.Generic;
+using SimpleJSON;
+
 
 
 namespace cfg.Levels
-{
+{ 
+
 public sealed partial class Level :  Bright.Config.BeanBase 
 {
-    public Level(ByteBuf _buf) 
+    public Level(JSONNode _json) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
+        { if(!_json["id"].IsNumber) { throw new SerializationException(); }  Id = _json["id"]; }
+        { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
         PostInit();
     }
 
-    public static Level DeserializeLevel(ByteBuf _buf)
+    public Level(int id, string name ) 
     {
-        return new Levels.Level(_buf);
+        this.Id = id;
+        this.Name = name;
+        PostInit();
+    }
+
+    public static Level DeserializeLevel(JSONNode _json)
+    {
+        return new Levels.Level(_json);
     }
 
     /// <summary>
@@ -57,5 +67,4 @@ public sealed partial class Level :  Bright.Config.BeanBase
     partial void PostInit();
     partial void PostResolve();
 }
-
 }

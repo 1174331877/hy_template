@@ -6,25 +6,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using Bright.Serialization;
-
+using SimpleJSON;
 
 
 namespace cfg
 { 
-public partial class Tables
+   
+public sealed partial class Tables
 {
     public Levels.TBLevel TBLevel {get; }
     public Hero.TBHeroInfo TBHeroInfo {get; }
 
-    public Tables(System.Func<string, ByteBuf> loader)
+    public Tables(System.Func<string, JSONNode> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
         TBLevel = new Levels.TBLevel(loader("levels_tblevel")); 
         tables.Add("Levels.TBLevel", TBLevel);
         TBHeroInfo = new Hero.TBHeroInfo(loader("hero_tbheroinfo")); 
         tables.Add("Hero.TBHeroInfo", TBHeroInfo);
-
         PostInit();
+
         TBLevel.Resolve(tables); 
         TBHeroInfo.Resolve(tables); 
         PostResolve();

@@ -1,9 +1,0 @@
-﻿using LT_Kernel;
-using System.Runtime.CompilerServices;
-
-namespace tempNamespace
-{
-    public class #SCRIPTNAME# : AbsModel
-    {
-    }
-}
