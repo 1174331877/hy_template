@@ -1,0 +1,17 @@
+﻿using LT_Kernel;
+using System.Runtime.CompilerServices;
+
+namespace tempNamespace
+{
+    public sealed class #SCRIPTNAME# : AbsModule
+    {
+		protected override void InitMgrs()
+		{
+		}
+
+        protected override void OnPassLevel()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}

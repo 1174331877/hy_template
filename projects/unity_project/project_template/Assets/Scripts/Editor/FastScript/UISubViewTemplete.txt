@@ -1,0 +1,16 @@
+﻿using LP;
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Threading;
+using System.Runtime.CompilerServices;
+
+namespace tempNamespace
+{
+    public sealed class #SCRIPTNAME#: UISub
+    {
+        public #SCRIPTNAME#(Transform rootTrans, CancellationTokenSource tokenSource) : base(rootTrans, tokenSource)
+        {
+        }
+    }
+}

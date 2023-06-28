@@ -1,0 +1,16 @@
+﻿using LT_UI;
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Runtime.CompilerServices;
+
+namespace tempNamespace
+{
+	[Panel(prefabPath: "Prefabs/#SCRIPTNAME#.prefab", canvasType: ECanvasType.BaseCanvas)]
+    public sealed class #SCRIPTNAME#: AbsPanel
+    {
+		public #SCRIPTNAME#(Transform transform, ECanvasType canvasType) : base(transform, canvasType)
+        {
+        }
+    }
+}

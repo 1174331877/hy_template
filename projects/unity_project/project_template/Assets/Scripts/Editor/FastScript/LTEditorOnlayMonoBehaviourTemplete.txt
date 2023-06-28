@@ -1,0 +1,18 @@
+﻿using UnityEngine;
+
+public class #SCRIPTNAME# : LTEditorOnlyMonoBehaviour
+{
+    #region EditorOnly
+    protected override void LTOnReset()
+    {
+    }
+
+    protected override void LTOnValidate()
+    {
+    }
+
+    protected override void OnInitComponents()
+    {
+    }
+    #endregion
+}

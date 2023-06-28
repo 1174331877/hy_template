@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using LT_EntityComponent;
+using System.Runtime.CompilerServices;
+
+namespace tempNamespace
+{
+    public class #SCRIPTNAME# : AbsEntity
+    {
+        public #SCRIPTNAME#(Transform transform, string entityTag, long id, ITuple tuple = null) : base(transform, entityTag, id ,tuple)
+        {
+        }
+
+        protected override void AddComponents()
+        {
+        }
+    }
+}

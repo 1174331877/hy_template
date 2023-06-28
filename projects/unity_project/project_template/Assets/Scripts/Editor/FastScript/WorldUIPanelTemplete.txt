@@ -1,0 +1,16 @@
+﻿using LT_UI;
+using System;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Runtime.CompilerServices;
+
+namespace tempNamespace
+{
+	[WorldPanel(prefabPath: "Prefabs/#SCRIPTNAME#.prefab")]
+    public sealed class #SCRIPTNAME#: AbsWorldPanel
+    {
+		public #SCRIPTNAME#(Transform transform) : base(transform)
+        {
+        }
+    }
+}

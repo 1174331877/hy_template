@@ -1,0 +1,9 @@
+﻿using System;
+
+namespace NetData
+{
+    [Serializable]
+    public sealed class #SCRIPTNAME#
+    {
+    }
+}
