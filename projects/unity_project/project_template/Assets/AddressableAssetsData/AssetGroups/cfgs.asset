@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: cfgs
   m_Data:
     m_SerializedData: []
-  m_GUID: d6c553253a599694ebaf165ea91f03c9
+  m_GUID: 741559dc0c57c4846953dc2f1881e188
   m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fe8eeef6af5680348923edf44d7b86ae, type: 2}
